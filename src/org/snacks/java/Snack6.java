@@ -8,30 +8,71 @@ public class Snack6 {
 
 		int[] sumArray = new int[10];
 
-		int maxArr1 = arr1[0];
-		int minArr1 = arr1[0];
-		int maxArr2 = arr2[0];
-		int minArr2 = arr2[0];
-
 		for (int x = 0; x < 10; x++) {
 			sumArray[x] = arr1[x] + arr2[x];
-			
+
 			System.out.println(sumArray[x] + " ");
+		}
 
-			if (arr1[x] > maxArr1 && arr2[x] > maxArr2) {
-				maxArr1 = arr1[x];
-				maxArr2 = arr2[x];
+//		MIN VALUE
 
-			} else if (arr1[x] < minArr1 && arr2[x] < minArr2) {
-				minArr1 = arr1[x];
-				minArr2 = arr2[x];
+		int arraysMin = Integer.MAX_VALUE;
+		
+		for (int x = 0; x < arr1.length; x++) {
+			int value = arr1[x];
+
+			if (value < arraysMin) {
+				arraysMin = value;
 			}
 		}
-		System.out.println("Array1 Max is : " + maxArr1);
-		System.out.println("Array2 Max is : " + maxArr2);
-		System.out.println("Array1 Min is : " + minArr1);
-		System.out.println("Array2 Min is : " + minArr2);
+		for (int x = 0; x < arr2.length; x++) {
+			int value = arr2[x];
 
+			if (value < arraysMin) {
+				arraysMin = value;
+			}
+		}
+		System.out.println("Arrays Min is:" + arraysMin);
+
+//		MAX VALUE
+
+		int arraysMax = Integer.MIN_VALUE;
+		
+		for (int x = 0; x < arr1.length; x++) {
+			int value = arr1[x];
+
+			if (value > arraysMax) {
+				arraysMax = value;
+			}
+		}
+		for (int x = 0; x < arr2.length; x++) {
+			int value = arr2[x];
+
+			if (value > arraysMax) {
+				arraysMax = value;
+			}
+		}
+		System.out.println("Arrays Max is:" + arraysMax);
+
+//		SUMMATION 
+
+		int arraysSum = 0;
+
+		for (int x = 0; x < arr1.length; x++) {
+
+			int value = arr1[x];
+			arraysSum += value;
+		}
+		for (int x = 0; x < arr2.length; x++) {
+
+			int value = arr2[x];
+			arraysSum += value;
+
+		}
+
+		int arraysAvg = arraysSum / (arr1.length + arr2.length);
+
+		System.out.println("Total arrays sum is: " + arraysSum);
+		System.out.println("Arrays average is: " + arraysAvg);
 	}
-
 }
