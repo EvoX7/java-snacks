@@ -9,6 +9,12 @@ public class Snack7 {
 		for (int i = 0; i < words.length; i++) {
 
 			System.out.print(words[i] + " ");
+		}
+		System.out.print("\n");
+
+		for (int i = words.length - 1; i >= 0; i--) {
+
+			System.out.print(words[i] + " ");
 
 		}
 
